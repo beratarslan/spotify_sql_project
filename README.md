@@ -1,11 +1,11 @@
-# Spotify SQL Project and Query Optimization
-Project Category: Advanced
+# Spotify SQL Project
+
+
 [Click Here to get Dataset](https://www.kaggle.com/datasets/sanjanchaudhari/spotify-dataset)
 
 ![Spotify Logo](images/spotify_logo.jpg)
 
-## Overview
-This project involves analyzing a Spotify dataset with various attributes about tracks, albums, and artists using **SQL**. It covers an end-to-end process of normalizing a denormalized dataset, performing SQL queries of varying complexity (easy, medium, and advanced), and optimizing query performance. The primary goals of the project are to practice advanced SQL skills and generate valuable insights from the dataset.
+
 
 ```sql
 -- create table
@@ -37,25 +37,9 @@ CREATE TABLE spotify (
     most_played_on VARCHAR(50)
 );
 ```
-## Project Steps
-
-### 1. Data Exploration
-Before diving into SQL, it’s important to understand the dataset thoroughly. The dataset contains attributes such as:
-- `Artist`: The performer of the track.
-- `Track`: The name of the song.
-- `Album`: The album to which the track belongs.
-- `Album_type`: The type of album (e.g., single or album).
-- Various metrics such as `danceability`, `energy`, `loudness`, `tempo`, and more.
 
 
-### 5. Query Optimization
-In advanced stages, the focus shifts to improving query performance. Some optimization strategies include:
-- **Indexing**: Adding indexes on frequently queried columns.
-- **Query Execution Plan**: Using `EXPLAIN ANALYZE` to review and refine query performance.
-  
----
-
-## 5 Practice Questions
+##  Practice Questions
 
 
 1. Find the top 3 most-viewed tracks for each artist using window functions.
@@ -96,6 +80,7 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **7 ms**
         - Planning time (P.T.): **0.17 ms**
     - Below is the **screenshot** of the `EXPLAIN` result before optimization:
+    - 
      ![Spotify Explain Before Index](images/spotify_explain_before_index.png)
 
 - **Index Creation on the `artist` Column**
@@ -110,13 +95,17 @@ To improve query performance, we carried out the following optimization process:
         - Execution time (E.T.): **0.153 ms**
         - Planning time (P.T.): **0.152 ms**
     - Below is the **screenshot** of the `EXPLAIN` result after index creation:
+    - 
       ![Spotify Explain After Index](images/spotify_explain_after_index.png)
 
 - **Graphical Performance Comparison**
     - A graph illustrating the comparison between the initial query execution time and the optimized query execution time after index creation.
     - **Graph view** shows the significant drop in both execution and planning times:
+    - 
       ![Spotify Graphical View 1](images/spotify_graphical%20view%201.png)
+      
       ![Spotify Graphical View 2](images/spotify_graphical%20view%202.png)
+      
       ![Spotify Graphical View 3](images/spotify_graphical%20view%203.png)
 
 This optimization shows how indexing can drastically reduce query time, improving the overall performance of our database operations in the Spotify project.
@@ -143,10 +132,3 @@ This optimization shows how indexing can drastically reduce query time, improvin
 
 ---
 
-## Contributing
-If you would like to contribute to this project, feel free to fork the repository, submit pull requests, or raise issues.
-
----
-
-## License
-This project is licensed under the MIT License.
